@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 가이드</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Project\css\home.css">
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Project\css\header_a.css">
+    <style>
+          div.first > a >  img {
+            width: 49%; /* 혹은 원하는 크기 */
+            height: 400px; /* 혹은 원하는 크기 */
+            float: left;
+            margin-right: 10px;
+            
+           }
+           div.second > img {
+            width: 49%; /* 혹은 원하는 크기 */
+            height: 400px; /* 혹은 원하는 크기 */
+            float: right;
+            margin-left: 10px;
+           }
+           
+           
+.calendar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f2f2f2;
+        }
+        .item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬, 필요한 경우 */
+}
+
+.item table {
+    margin: auto; /* table도 가운데 정렬 */
+}
+
+
+    </style>
+   
+</head>
+<body>
+    <header><a href="C:\Users\user\Desktop\Project\src\main.html">travel</a></header>
+    <nav>
+        <ul>
+            <li><a href="C:\Users\user\Desktop\Project\src\main.html">홈</a></li>
+            <li><a href="#">국외</a>
+                <ul>
+                    <li><a href="#">Japen</a></li>
+                    <li><a href="#">U.S.A</a></li>
+                    <li><a href="#">Thailend</a></li>
+                </ul>
+            </li>
+            <li><a href="#">국내</a>
+                <ul>
+                    <li><a href="C:\Users\user\Desktop\Project\src\busan.html">부산</a></li>
+                    <li><a href="C:\Users\user\Desktop\Project\src\daegwallyeong.html">대관령</a></li>
+                    <li><a href="C:\Users\user\Desktop\Project\src\jeju.html">제주도</a></li>
+                </ul>
+            </li>
+            <li><a href="#">꿀팁</a></li>
+        </ul>
+        <input type="text" value="">
+    </nav>
+    <div class="content">
+        <aside>
+            <div class="first"><a href="C:\Users\user\Desktop\Project\src\busan.html"><img src="C:\Users\user\Desktop\Project\img\busan.jpg" alt=""></a></div>
+            <div class="second"><img src="C:\Users\user\Desktop\Project\img\태국.jpg" alt=""></div>
+        </aside>
+        <main>
+            <h3 style="text-align: center;">여행 준비물</h3>
+            <div class="item">
+                <table border="2">
+                    <tr>
+                 <td> <label for="it">여권</label>
+                  <input type="checkbox"></td>
+                  <td> <label for="it">비자</label>
+                    <input type="checkbox"></td>
+                    <td> <label for="it">신용카드</label>
+                        <input type="checkbox"></td>
+                        <td> <label for="it">현금</label>
+                            <input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td> <label for="it">상의</label>
+                     <input type="checkbox"></td>
+                     <td> <label for="it">옷</label>
+                       <input type="checkbox"></td>
+                       <td> <label for="it">옷</label>
+                           <input type="checkbox"></td>
+                           <td> <label for="it">옷</label>
+                               <input type="checkbox"></td>
+                   </tr>
+                </table>
+            </div>
+
+            <h3 style="text-align: center;">여행지 별 성수기 캘린더</h3>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+</html>
+
