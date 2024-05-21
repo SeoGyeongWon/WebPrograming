@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: #f0f0f0;
+    padding: 1em;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    position: relative;
+    /* 여기에 추가 */
+}
+
+nav ul li ul {
+    display: none;
+    /* 하위 메뉴를 기본적으로 숨깁니다. */
+    position: absolute;
+    /* 상위 메뉴 항목 기준으로 위치합니다. */
+    background-color: #f0f0f0;
+    /* 하위 메뉴의 배경색 */
+    padding: 1em;
+    left: 0;
+    /* 좌측 정렬 */
+    width: 80px;
+    /* 상위 항목 너비에 맞춤 */
+}
+
+nav ul li:hover ul {
+    display: block;
+    /* 마우스를 올릴 때 하위 메뉴를 보여줌 */
+}
+
+nav ul li ul li {
+    display: block;
+    /* 하위 메뉴 항목을 블록으로 표시 */
+    margin: 0.5em 0;
+    /* 간격 조정 */
+}
+
+aside {
+    background-color: #e0e0e0;
+    padding: 1em;
+    overflow: hidden;
+}
+
+main {
+    flex-grow: 2;
+    padding: 1em;
+    overflow: scroll;
+}
+
+footer {
+    margin-top: auto;
+}
+
+li a {
+    text-decoration: none;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.feedback-container {
+    display: flex;
+    width: 100%; /* Full width of modal-content */
+    padding-bottom: 10px;
+}
+
+.feedback-container input[type="text"] {
+    flex-grow: 1; /* Remainder of space */
+    padding: 10px;
+    margin-right: 10px; /* Space between input and button */
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
