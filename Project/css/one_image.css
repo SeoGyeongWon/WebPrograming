@@ -1,8 +1,7 @@
 .left > img {
-            width: auto;
-            display: block;
+            width: 20%;
             float: left;
-            height: 300px;
+            height: 250px;
             margin-right: 20px;
             margin-bottom: 10px;
             border-radius: 20%;

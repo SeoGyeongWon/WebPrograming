@@ -16,6 +16,10 @@ nav {
     background-color: #f0f0f0;
     padding: 1em;
     position: relative;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 nav ul {
     list-style-type: none;
@@ -71,16 +75,6 @@ li a {
     margin-left: 10px;
    }
    
-   input[type="text"] {
-float: right; /* 오른쪽 정렬을 위한 float 속성을 유지할 필요가 없습니다. */
-width: 25%; /* 입력 필드의 너비 */
-height: auto; /* 입력 필드의 높이를 자동으로 설정 */
-display: flex; /* flexbox 모델을 사용하지 않아도 됩니다. */
-position: absolute; /* 절대 위치 */
-top: 50%; /* 상단에서부터 50% 위치 */
-right: 10px; /* 오른쪽에서부터 10px 떨어진 위치 */
-transform: translateY(-50%); /* 수직 중앙 정렬을 위해 자신의 높이의 절반만큼 위로 이동 */
-}
 .calendar {
     width: 100%;
     border-collapse: collapse;
@@ -95,12 +89,23 @@ transform: translateY(-50%); /* 수직 중앙 정렬을 위해 자신의 높이�
 }
 .item {
 width: 100%;
-height: auto;
+height: 400px;
 display: flex;
 justify-content: center; /* 가로 중앙 정렬 */
 align-items: center; /* 세로 중앙 정렬, 필요한 경우 */
 }
 
 .item table {
+    width: 80%;
+    height: 400px;
 margin: auto; /* table도 가운데 정렬 */
+
+}
+.item table td {
+    font-size: 35px; /* 글씨 크기를 16px로 조정합니다. */
+}
+
+.item input[type="checkbox"] {
+    transform: scale(3.0); /* 체크박스 크기를 1.5배로 증가시킵니다. */
+    margin: 5px; /* 여백을 추가하여 체크박스 주변 공간을 늘립니다. */
 }

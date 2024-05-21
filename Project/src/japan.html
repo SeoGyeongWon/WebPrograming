@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="..\css\Center_alignment.css">
     <link rel="stylesheet" href="..\css\center-iframe.css">
     <link rel="stylesheet" href="..\css\one_image.css">
+    <link rel="stylesheet" href="..\css\search.css">
+
 
     <style>
         .image-caption {
@@ -22,6 +24,7 @@
       margin-right: 50px; /* 오른쪽 여백을 조정합니다. */
       margin-bottom: 20px;
   }
+
   .highlight {
     font-size: 1.2em; /* 글자 크기 증가 */
     color: #FF6347; /* 토마토 색상 적용 */
@@ -35,6 +38,7 @@ img {
 .hidden {
     display: none;
 }
+
   </style>
 </head>
 <body>
@@ -56,9 +60,11 @@ img {
                     <li><a href="..\src\jeju.html">제주도</a></li>
                 </ul>
             </li>
-            <li><a href="..\src\tip.html">꿀팁</a></li>
+            <li><a href="#">꿀팁</a></li>
         </ul>
-        <input type="text" value="">
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+        </div>
     </nav>
     <div class ="content">
         <aside class = "center-iframe">
@@ -128,8 +134,7 @@ img {
                 </p>
                 </div>
                 </div>
-                <br><br><br><br>
-               
+                <br><br><br><br> 
                 <div>
                     <h1 style="text-align: center;">일본 먹거리</h1>
                     <div class="container">

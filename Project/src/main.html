@@ -6,49 +6,92 @@
     <title>여행 가이드</title>
     <link rel="stylesheet" href="..\css\home.css">
     <link rel="stylesheet" href="..\css\header_a.css">
+    <link rel="stylesheet" href="..\css\img_hover.css">
+    <link rel="stylesheet" href="..\css\search.css">
+
     <style>
-          div.first > a >  img {
-            width: 49%; /* 혹은 원하는 크기 */
-            height: 400px; /* 혹은 원하는 크기 */
-            float: left;
-            margin-right: 10px;
-            
-           }
-           div.second > img {
-            width: 49%; /* 혹은 원하는 크기 */
-            height: 400px; /* 혹은 원하는 크기 */
-            float: right;
-            margin-left: 10px;
-           }
-           
-           
-.calendar {
-            width: 100%;
-            border-collapse: collapse;
+@media (max-width: 1024px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .image-container {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .image-container img {
+                height: auto;
+            }
         }
-        .calendar th, .calendar td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .image-container img {
+                height: auto;
+            }
+
+            aside, main {
+                width: 100%;
+                float: none;
+                padding: 10px 0;
+            }
         }
-        .calendar th {
-            background-color: #f2f2f2;
+
+        @media (max-width: 480px) {
+            header a {
+                font-size: 18px;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
         }
-        .item {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬, 필요한 경우 */
+.checklist{
+    width: 70%;
+    height: 400px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
 }
 
-.item table {
-    margin: auto; /* table도 가운데 정렬 */
+.image-container::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
+.image-container:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
 
-    </style>
-   
+.footer_content{
+    text-align: center; padding: 20px; background-color: #f2f2f2;
+}
+
+</style>
 </head>
 <body>
     <header><a href="..\src\main.html">travel</a></header>
@@ -69,41 +112,65 @@
                     <li><a href="..\src\jeju.html">제주도</a></li>
                 </ul>
             </li>
-            <li><a href="..\src\tip.html">꿀팁</a></li>
+            <li><a href="#">꿀팁</a></li>
         </ul>
-        <input type="text" value="">
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+        </div>
+        
     </nav>
     <div class="content">
         <aside>
-            <a href="busan.html" height="5" width="10" target="_blank">
-                <div class="first"><img src="..\img\busan.jpg" alt="no image"></div></a>
+            <a href="busan.html" target="_blank">
+                <div class="image-container" data-text="부산 광안리의 맑고 푸른 해변과 그 앞에 화려하게 놓여진 광안대교의 풍경으로 보러 이번 여름엔 부산으로 놀러오세요!😊"><img src="..\img\busan.jpg" alt="부산"></div>
+            </a>
     
-            <a href="thai.html" height="5" width="10" target="_blank">
-                <div class="second"><img src="..\img\태국.jpg" alt="no image"></div></a>
-    
+            <a href="thai.html" target="_blank">
+                <div class="image-container" data-text="황혼 시간에 촬영되어 보라색 배경과 어울러진 사원을 통해 장관의 풍경을 볼 수 있는 태국의 와트 아룬 사원을 보러 이번 여행은 태국이 어떨까요?😊"><img src="..\img\태국.jpg" alt="태국"></div>
+            </a>  
         </aside>
         <main>
-            <h3 style="text-align: center;">여행 준비물</h3>
+            <h1 style="text-align: center;">여행 준비물</h1>
             <div class="item">
                 <table border="2">
                     <tr>
-                 <td> <label for="it">여권</label>
+                 <td> <label for="it">여권&nbsp;&nbsp;</label>
                   <input type="checkbox"></td>
                   <td> <label for="it">비자</label>
                     <input type="checkbox"></td>
-                    <td> <label for="it">신용카드</label>
+                    <td> <label for="it">지갑</label>
                         <input type="checkbox"></td>
                         <td> <label for="it">현금</label>
                             <input type="checkbox"></td>
                 </tr>
                 <tr>
-                    <td> <label for="it">상의</label>
+                    <td> <label for="it">세안도구</label>
                      <input type="checkbox"></td>
-                     <td> <label for="it">옷</label>
+                     <td> <label for="it">화장품</label>
                        <input type="checkbox"></td>
-                       <td> <label for="it">옷</label>
+                       <td> <label for="it">의류</label>
                            <input type="checkbox"></td>
-                           <td> <label for="it">옷</label>
+                           <td> <label for="it">악세사리</label>
+                               <input type="checkbox"></td>
+                   </tr>
+                   <tr>
+                    <td> <label for="it">충전기</label>
+                     <input type="checkbox"></td>
+                     <td> <label for="it">태블릿</label>
+                       <input type="checkbox"></td>
+                       <td> <label for="it">이어폰</label>
+                           <input type="checkbox"></td>
+                           <td> <label for="it">보조 배터리</label>
+                               <input type="checkbox"></td>
+                   </tr>
+                   <tr>
+                    <td> <label for="it">영양제</label>
+                     <input type="checkbox"></td>
+                     <td> <label for="it">책</label>
+                       <input type="checkbox"></td>
+                       <td> <label for="it">미니백팩</label>
+                           <input type="checkbox"></td>
+                           <td> <label for="it">카메라</label>
                                <input type="checkbox"></td>
                    </tr>
                 </table>
@@ -172,7 +239,10 @@
             </table>
         </main>
     </div>
-    <footer></footer>
+    <footer>
+            <p>&copy; 2024 Travel Guide. All rights reserved.</p>
+            <p>이메일: contact@travelguide.com | 전화번호: 02-123-4567</p>
+    </footer>
 </body>
 </html>
 
