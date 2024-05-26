@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* flex 방향을 row로 변경 */
+    height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed; /* 헤더와 푸터를 고정 */
+    width: 100%; /* 전체 너비 */
+    z-index: 100; /* 다른 요소 위에 표시 */
+}
+
+header {
+    top: 0; /* 상단에 위치 */
+}
+
+footer {
+    bottom: 0; /* 하단에 위치 */
+    margin-top: auto;
+}
+
+nav {
+    background-color: #f0f0f0;
+    padding: 1em;
+    width: 20%; /* 네비게이션의 너비 */
+    height: calc(100vh - 2em); /* 전체 높이에서 헤더와 푸터 높이를 빼줌 */
+    overflow: auto; /* 내용이 넘칠 경우 스크롤 */
+    position: fixed; /* 고정 위치 */
+    top: 60px; /* 헤더 아래에 위치 */
+}
+
+main {
+    flex-grow: 2;
+    padding: 1em;
+    overflow: scroll;
+    margin-left: 1%; /* 네비게이션 너비만큼 마진을 줌 */
+    margin-top: 60px; /* 헤더 높이만큼 마진을 줌 */
+    height: calc(100vh - 120px); /* 헤더와 푸터 높이를 제외한 나머지 높이 */
+    display: flex;
+    flex-direction: row; /* 자식 요소들을 가로로 정렬 */
+    justify-content: center; /* 자식 요소들을 가로축 중앙에 정렬 */
+    gap: 10px; /* 두 이미지 사이 간격을 추가 */
+}
+
+aside {
+    background-color: #e0e0e0;
+    padding: 1em;
+    overflow: hidden;
+    width: 20%; /* 사이드바 너비 */
+    position: fixed; /* 고정 위치 */
+    right: 0; /* 우측에 위치 */
+    top: 60px; /* 헤더 아래에 위치 */
+    height: calc(100vh - 2em); /* 전체 높이에서 헤더와 푸터 높이를 빼줌 */
+}
+
+li a {
+    text-decoration: none;
+   }
+ 
+   nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+display: inline;
+margin: 0 10px;
+position: relative; /* 여기에 추가 */
+}
+nav ul li ul {
+display: none; /* 하위 메뉴를 기본적으로 숨깁니다. */
+position: absolute; /* 상위 메뉴 항목 기준으로 위치합니다. */
+background-color: #f0f0f0; /* 하위 메뉴의 배경색 */
+padding: 1em;
+left: 0; /* 좌측 정렬 */
+width: 80px; /* 상위 항목 너비에 맞춤 */
+}
+nav ul li:hover ul {
+display: block; /* 마우스를 올릴 때 하위 메뉴를 보여줌 */
+}
+nav ul li ul li {
+display: block; /* 하위 메뉴 항목을 블록으로 표시 */
+margin: 0.5em 0; /* 간격 조정 */
+}
+
+
