@@ -1,0 +1,58 @@
+.image-caption {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.audio-right {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 1.2em;
+    color: #FF6347;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.highlight:hover + img {
+    display: block;
+    top: 220px;
+    left: 50%;  
+    transform: translateX(50%);
+}
+
+img {
+    width: 500px;
+    height: 30%;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);    
+    z-index: 100; 
+}
+
+.hidden {
+    display: none;
+}
+
+tip.left {
+    text-align: center; /* 텍스트와 이미지를 중앙 정렬 */
+    position: relative; /* 상대 위치 지정 */
+    overflow: hidden; /* 넘치는 내용 숨김 처리 */
+}
+
+#map {
+    transition: transform 0.3s ease, left 0.3s ease; /* 부드러운 확대/축소 전환 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    display: block; /* 블록 레벨 요소로 설정 */
+    margin: 0 auto; /* 상하 여백 0, 좌우 자동으로 중앙 정렬 */
+}
+
+#map:hover {
+    transform: scale(2.5); /* 확대 배율 설정 */
+}
+
+

@@ -1,0 +1,13 @@
+           div.first > img {
+            width: 49%; /* 혹은 원하는 크기 */
+            height: 400px; /* 혹은 원하는 크기 */
+            float: left;
+            
+            
+           }
+           div.second > img {
+            width: 49%; /* 혹은 원하는 크기 */
+            height: 400px; /* 혹은 원하는 크기 */
+            float: left;   
+           }
+           
