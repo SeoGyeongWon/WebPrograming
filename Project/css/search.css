@@ -1,0 +1,17 @@
+.search {
+  position: relative;
+  width: 300px;
+  margin-left: auto;
+}
+.search input {
+    width: 200px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px 10px 34px;
+    font-size: 14px;
+    background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 17px;
+  
+}

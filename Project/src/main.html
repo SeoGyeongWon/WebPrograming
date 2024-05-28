@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 가이드</title>
+    <link rel="stylesheet" href="..\css\main.css">
+    <link rel="stylesheet" href="..\css\header_a.css">
+    <link rel="stylesheet" href="..\css\search.css">
+    <link rel="stylesheet" href="..\css\image_container.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  
+    <style>
+    .bottom {
+        position: absolute;
+        top: 270px;
+        left: 20px;
+        width: 600px;
+    }
+    .bottom table {
+        width: 50%;
+        height: 200px;
+    }
+    .bottom td {
+        height: auto;
+    }
+    .cal {
+        position: absolute;
+        top: 310px;
+    }
+    .cal td {
+        width: 215px;
+        text-align: center;
+    }
+
+    
+
+    </style>
+</head>
+<body>
+    <header><a href="..\src\main.html">Gyeonggi Travel</a></header>
+    <nav>
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+        </div>
+        <ul>
+            <li><a href="..\src\main.html">홈</a></li>
+            <li><a href="#">국외</a>
+                <ul>
+                    <li><a href="..\src\japan.html">Japan</a></li>
+                    <li><a href="..\src\usa.html">U.S.A</a></li>
+                    <li><a href="..\src\thai.html">Thailand</a></li>
+                </ul>
+            </li>
+            <li><a href="#">국내</a>
+                <ul>
+                    <li><a href="..\src\busan.html">부산</a></li>
+                    <li><a href="..\src\daegwallyeong.html">대관령</a></li>
+                    <li><a href="..\src\jeju.html">제주도</a></li>
+                </ul>
+            </li>
+            <li><a href="..\src\tip.html">꿀팁</a></li>
+        </ul>
+
+        <h1 style="text-align: center; top: 210px; left: 40px; position: absolute;">여행 준비물 CheckList</h1>
+        <div class="bottom">
+            <div class="item">
+                <table border="2">
+                    <tr>
+                        <td><label for="it">여권&nbsp;&nbsp;</label><input type="checkbox"></td>
+                        <td><label for="it">비자</label><input type="checkbox"></td>
+                        <td><label for="it">지갑</label><input type="checkbox"></td>      
+                    </tr>
+                    <tr>
+                        <td><label for="it">세안도구</label><input type="checkbox"></td>
+                        <td><label for="it">화장품</label><input type="checkbox"></td>
+                        <td><label for="it">의류</label><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="it">충전기</label><input type="checkbox"></td>
+                        <td><label for="it">태블릿</label><input type="checkbox"></td>
+                        <td><label for="it">보조 배터리</label><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="it">상비약</label><input type="checkbox"></td>
+                        <td><label for="it">이어폰</label><input type="checkbox"></td>
+                        <td><label for="it">보조가방</label><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <a href="busan.html" target="_blank">
+            <div class="image-container" data-text="부산 광안리의 맑고 푸른 해변과 그 앞에 화려하게 놓여진 광안대교의 풍경을 보러 이번 여름엔 부산으로 놀러오세요!😊">
+                <img src="..\img\busan.jpg" alt="부산">
+            </div>
+        </a>
+
+        <a href="thai.html" target="_blank">
+            <div class="image-container" data-text="황혼 시간에 촬영되어 보라색 배경과 어울러진 사원을 통해 장관의 풍경을 볼 수 있는 태국의 와트 아룬 사원을 보러 이번 여행은 태국이 어떨까요?😊">
+                <img src="..\img\태국.jpg" alt="태국">
+            </div>
+        </a>  
+    </main>
+    <aside>
+        <script>
+            $(function() {
+                $("#datepicker").datepicker();
+            });
+        </script>
+        <input type="text" id="datepicker" placeholder="날짜 선택">
+
+        <h2 style="text-align: center; top: 250px; left: 23px; position: absolute;" >월별 여행지 성수기 기간</h2>
+        <div class="cal">
+        <table border="2">
+            <tr>
+                <th>일본</th>
+                <td>3월~5월, 9월~11월</td>
+            </tr>
+            <tr>
+                <th>미국</th>
+                <td>3월~5월, 9월~10월</td>
+            </tr>
+            <tr>
+                <th>태국</th>
+                <td>11월~5월</td>
+            </tr>
+            <tr>
+                <th>부산</th>
+                <td>7월~8월</td>
+            </tr>
+            <tr>
+                <th>대관령</th>
+                <td>11월~5월</td>
+            </tr>
+            <tr>
+                <th>제주도</th>
+                <td>5월~10월</td>
+            </tr>
+        </table>
+    </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Travel Guide. All rights reserved.</p>
+        <p>이메일: GyeonggiUniversity@gyeonggi.ac.kr | 전화번호: 02-123-4567</p>
+    </footer>
+</body>
+</html>
