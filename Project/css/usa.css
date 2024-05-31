@@ -1,0 +1,177 @@
+.food-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.food-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 0;
+}
+
+.food-content {
+    padding: 20px;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 20px;
+    max-width: 200px;
+}
+
+.food-description h3 {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.food-description p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+}
+
+.food-description {
+    text-align: center;
+    /* 내용 중앙 정렬 */
+}
+
+.food-content {
+    text-align: center;
+}
+
+.food-container h1 {
+    margin-left: auto;
+
+}
+
+.image-caption {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.audio-right {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 1.2em;
+    color: #FF6347;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .image-caption {
+        font-size: 20px;
+    }
+
+    .audio-right {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    header,
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content,
+    .practice {
+        margin-bottom: 20px;
+    }
+
+    .content img,
+    .practice img {
+        width: 100%;
+        height: auto;
+        order: -1;
+    }
+
+    .food-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-description {
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-caption {
+        font-size: 25px;
+    }
+
+    .audio-right {
+        margin-right: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-item {
+        flex-direction: row;
+    }
+
+    .food-image {
+        width: 200px;
+        height: auto;
+        margin-right: 20px;
+        max-width: none !important;
+    }
+
+    .food-description {
+        flex: 1;
+        text-align: center;
+    }
+}

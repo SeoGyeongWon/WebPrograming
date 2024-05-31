@@ -1,0 +1,178 @@
+.image-caption {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+main {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.audio-right {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 1.2em;
+    color: #FF6347;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.highlight:hover+img {
+    display: block;
+    top: 220px;
+    left: 50%;
+    transform: translateX(50%);
+}
+
+img {
+    width: 500px;
+    height: 30%;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+tip-left {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    transition: transform 0.3s ease, left 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#map:hover {
+    transform: scale(2.5);
+}
+
+
+.univ img {
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 20%;
+    height: 520px;
+    width: 500px;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .image-caption {
+        font-size: 20px;
+    }
+
+    .audio-right {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    header,
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+
+    .tip-ul {
+        margin: auto;
+        margin-left: -210px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+        order: -1;
+    }
+
+    .content.right {
+        flex-direction: column;
+    }
+
+    .content.left {
+        flex-direction: column;
+    }
+
+    .univ img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .first,
+    .second {
+        width: 200%;
+        margin-left: auto;
+    }
+
+    .first img,
+    .second img {
+        width: 150%;
+        height: auto;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-caption {
+        font-size: 25px;
+    }
+
+    .audio-right {
+        margin-right: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .univ>img {
+        width: 50%;
+        height: auto;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    .first,
+    .second {
+        width: 200%;
+        display: inline-block;
+    }
+
+    .first img,
+    .second img {
+        width: 200%;
+        height: auto;
+    }
+}
